@@ -34,115 +34,64 @@ public class ATM extends javax.swing.JFrame {
 
         withdrawal = new javax.swing.JButton();
         deposite = new javax.swing.JButton();
-        balEnq = new javax.swing.JButton();
         changePIN = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        withdrawal.setBackground(new java.awt.Color(0, 0, 0));
-        withdrawal.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
-        withdrawal.setForeground(new java.awt.Color(51, 255, 255));
+        withdrawal.setBackground(new java.awt.Color(102, 255, 255));
+        withdrawal.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         withdrawal.setText("WITHDRAWAL");
         withdrawal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 withdrawalActionPerformed(evt);
             }
         });
+        getContentPane().add(withdrawal, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 260, 220, -1));
 
-        deposite.setBackground(new java.awt.Color(0, 0, 0));
-        deposite.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
-        deposite.setForeground(new java.awt.Color(51, 255, 255));
+        deposite.setBackground(new java.awt.Color(102, 255, 255));
+        deposite.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         deposite.setText("DEPOSITE");
         deposite.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 depositeActionPerformed(evt);
             }
         });
+        getContentPane().add(deposite, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 160, 220, -1));
 
-        balEnq.setBackground(new java.awt.Color(0, 0, 0));
-        balEnq.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
-        balEnq.setForeground(new java.awt.Color(51, 255, 255));
-        balEnq.setText("BALANCE ENQUIRY");
-        balEnq.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                balEnqActionPerformed(evt);
-            }
-        });
-
-        changePIN.setBackground(new java.awt.Color(0, 0, 0));
-        changePIN.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
-        changePIN.setForeground(new java.awt.Color(51, 255, 255));
+        changePIN.setBackground(new java.awt.Color(102, 255, 255));
+        changePIN.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         changePIN.setText("CHANGE PIN");
         changePIN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 changePINActionPerformed(evt);
             }
         });
+        getContentPane().add(changePIN, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 360, 220, -1));
 
-        jButton2.setBackground(new java.awt.Color(0, 0, 0));
+        jButton2.setBackground(new java.awt.Color(51, 255, 255));
         jButton2.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(51, 255, 255));
         jButton2.setText("BACK");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 500, 88, -1));
 
         jLabel1.setFont(new java.awt.Font("Stencil", 1, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(51, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("RIT'S BANK");
+        jLabel1.setText("SAURABH'S BANK");
         jLabel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(101, 22, 584, 65));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(122, Short.MAX_VALUE)
-                .addComponent(balEnq, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(42, 42, 42)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(changePIN, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(withdrawal, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(158, 158, 158))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(101, 101, 101)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 584, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(125, 125, 125)
-                    .addComponent(deposite, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(476, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(70, 70, 70)
-                .addComponent(withdrawal)
-                .addGap(92, 92, 92)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(changePIN)
-                    .addComponent(balEnq))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 173, Short.MAX_VALUE)
-                .addComponent(jButton2)
-                .addGap(21, 21, 21))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(156, 156, 156)
-                    .addComponent(deposite)
-                    .addContainerGap(349, Short.MAX_VALUE)))
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login.png"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-110, 0, 930, 540));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -158,16 +107,13 @@ public class ATM extends javax.swing.JFrame {
     }//GEN-LAST:event_withdrawalActionPerformed
 
     private void depositeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_depositeActionPerformed
-        // TODO add your handling code here:
+
        System.out.print(idd);
        System.out.print(pas);
+       this.setVisible(false);
        new Deposit(idd, pas).setVisible(true);
         
     }//GEN-LAST:event_depositeActionPerformed
-
-    private void balEnqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_balEnqActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_balEnqActionPerformed
 
     private void changePINActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_changePINActionPerformed
         // TODO add your handling code here:
@@ -217,11 +163,11 @@ public class ATM extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton balEnq;
     private javax.swing.JButton changePIN;
     private javax.swing.JButton deposite;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JButton withdrawal;
     // End of variables declaration//GEN-END:variables
 }

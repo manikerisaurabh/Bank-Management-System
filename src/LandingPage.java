@@ -1,3 +1,6 @@
+
+import java.awt.Cursor;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -14,6 +17,7 @@ public class LandingPage extends javax.swing.JFrame {
      */
     public LandingPage() {
         initComponents();
+        cursor();
     }
 
     /**
@@ -28,14 +32,18 @@ public class LandingPage extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         loginBtn = new javax.swing.JButton();
         createAccBtn = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Stencil", 1, 48)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Wide Latin", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(51, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("RIT'S BANK");
-        jLabel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel1.setText("SAURABH'S BANK");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 691, 111));
 
+        loginBtn.setBackground(new java.awt.Color(51, 255, 255));
         loginBtn.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         loginBtn.setText("LOGIN");
         loginBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -43,7 +51,9 @@ public class LandingPage extends javax.swing.JFrame {
                 loginBtnActionPerformed(evt);
             }
         });
+        getContentPane().add(loginBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 460, 180, -1));
 
+        createAccBtn.setBackground(new java.awt.Color(102, 255, 255));
         createAccBtn.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         createAccBtn.setText("CREATE ACCOUNT");
         createAccBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -51,41 +61,24 @@ public class LandingPage extends javax.swing.JFrame {
                 createAccBtnActionPerformed(evt);
             }
         });
+        getContentPane().add(createAccBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 460, 189, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(47, 47, 47)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 691, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(99, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(56, 56, 56)
-                .addComponent(loginBtn)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(createAccBtn)
-                .addGap(149, 149, 149))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(36, 36, 36)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(192, 192, 192)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(loginBtn)
-                    .addComponent(createAccBtn))
-                .addContainerGap(221, Short.MAX_VALUE))
-        );
+        jLabel2.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel2.setForeground(new java.awt.Color(51, 255, 255));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login.png"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 770, 590));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    private void cursor() {
+        createAccBtn.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        loginBtn.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+    }
     private void createAccBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createAccBtnActionPerformed
         // TODO add your handling code here:
-                this.setVisible(false);
-         new CreateAccount().setVisible(true);
+        this.setVisible(false);
+        new CreateAccount().setVisible(true);
     }//GEN-LAST:event_createAccBtnActionPerformed
 
     private void loginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginBtnActionPerformed
@@ -125,6 +118,8 @@ public class LandingPage extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new LandingPage().setVisible(true);
+                
+                
             }
         });
     }
@@ -132,6 +127,7 @@ public class LandingPage extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton createAccBtn;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JButton loginBtn;
     // End of variables declaration//GEN-END:variables
 }
